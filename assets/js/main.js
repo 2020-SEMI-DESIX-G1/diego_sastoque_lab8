@@ -1,12 +1,9 @@
 $("#delete").click(function(e) {
 
-    //Prevenir submit
     e.preventDefault();
 
-    //Valor del campo id oculto 
     var estudiante_id = $("#estudiante_id").val();
 
-    //Sustitución de DELETE
     $.ajax({
         url: '/estudiante/' + estudiante_id,
         type: 'DELETE',
@@ -21,14 +18,9 @@ $("#update").click(function(e) {
 
     //Prevenir submit
     e.preventDefault();
-
-    //Valor del campo id oculto
     var estudiante_id = $("#estudiante_id").val();
-
-    //datos del formulario
     var estudiante = { nombre: $("#nombre").val(), edad: $("#edad").val() }
 
-    //Sustitución de Update
     $.ajax({
         url: '/estudiante/' + estudiante_id,
         type: 'PUT',
