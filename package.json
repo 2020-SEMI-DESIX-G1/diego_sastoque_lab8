@@ -1,0 +1,30 @@
+{
+    "name": "laboratorio_8",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "mongo:start": "docker run --rm -d --name=lab8 -p 27019:27017 mongo",
+        "mongo:stop": "docker stop lab8",
+        "start": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/2020-SEMI-DESIX-G1/alexander_almengor_laboratorio7"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/2020-SEMI-DESIX-G1/alexander_almengor_laboratorio7/issues"
+    },
+    "homepage": "https://github.com/2020-SEMI-DESIX-G1/alexander_almengor_laboratorio7#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.9.18",
+        "nodemon": "^2.0.4",
+        "pug": "^3.0.0"
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="es")
+
+    head
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style
+            include ../assets/styles/bootstrap.css
+        title  Estudiante
+
+    body
+       
+        div(class="grid-container", align="center")
+            
+            h2  Generales
+            
+            form(method="post",action="/estudiantes/" + estudiante._id)
+
+                label(for="nombre") Nombre:  
+                input(name="nombre", type="text", value=estudiante.nombre, id="nombre") 
+                br
+                label(for="edad") Edad: 
+                input(name="edad", type="number", value=estudiante.edad, id="edad") 
+                input(name="id", type="hidden", value=estudiante._id , id="estudiante_id")
+                br
+                br
+
+                div(class="container", align="center")
+                    button(type="submit", class="btn btn-warning", name="eliminar", id="delete") Eliminar
+                    button(type="submit", class="btn btn-info" name="actualizar", id="update") Actualizar
+    
+    script
+        include ../assets/js/jquery-3.5.1.min.js
+    script
+        include ../assets/js/main.js

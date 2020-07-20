@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="es")
+
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style
+            include ../assets/styles/bootstrap.css
+        title Lista de Estudiantes
+
+    body
+
+        div(class="container row d-flex justify-content-center" align="center")
+
+            div(class="container col-12 d-flex flex-column")
+
+                h3 Registro de Estudiantes
+
+                form(method="post")
+                
+                    label(for="nombre") Nombre: 
+                    input(name="nombre", type="text")
+                    br
+                    label(for="edad") Edad: 
+                    input(name="edad", type="number")
+                    br
+                    br
+                    button(class="btn btn-primary" type="submit") Guardar
+            
+            br
+
+            div(class="col-12 container2")
+                h3 Lista de Estudiantes
+                table
+                    thead
+                        th Nombre
+                        th Edad
+                    tbody
+                        each estudiante in estudiantes
+                            tr
+                                td 
+                                    a(href='/estudiante/' + estudiante._id) #{estudiante.nombre}
+                                td #{estudiante.edad}
+
+            
+                

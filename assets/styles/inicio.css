@@ -1,0 +1,60 @@
+body {
+    background-image: url("https://simplecompany.io/wp-content/uploads/2020/07/library.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "container";
+    background: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 30px;
+    font-family: monospace;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+label {
+    margin: 0;
+    padding: 0 0 5px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+a {
+    border: none;
+    height: 30px;
+    margin: 2px;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    font-size: 12px;
+    font-family: monospace;
+    background-color: #CC483C;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
